@@ -347,3 +347,4 @@ ros-jazzy-xacro
 ros-jazzy-yaml-cpp-vendor
 ros-jazzy-zstd-image-transport
 ros-jazzy-zstd-vendor
+nlohmann-json3-dev
