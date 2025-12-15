@@ -27,7 +27,12 @@ git clone --branch stable https://github.com/facebookresearch/habitat-sim.git
 cd habitat-sim
 git checkout 0223c78
 **add --break-system-packages to setup.py:478**
-python setup.py install --user --headless --with-cuda --bullet
+***
+if cuda error, add this to src/cmakelist.txt:
+set(CMAKE_CUDA_COMPILER "/usr/local/cuda-12.2/bin/nvcc")
+set(CMAKE_CUDA_ARCHITECTURES 52 60 61 75 86 89)
+***
+python setup.py install --headless --with-cuda --bullet
 cd ..
 
 - habitat-lab
