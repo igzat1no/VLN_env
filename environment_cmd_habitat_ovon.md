@@ -9,6 +9,11 @@ git clone https://github.com/igzat1no/VLN_env.git
 pip install -r requirements_ovon.txt --no-dependencies
 
 - habitat-sim
+***
+if cuda error, add this to src/cmakelist.txt:
+set(CMAKE_CUDA_COMPILER "/usr/local/cuda-12.2/bin/nvcc")
+set(CMAKE_CUDA_ARCHITECTURES 52 60 61 75 86 89)
+***
 git clone --branch stable https://github.com/facebookresearch/habitat-sim.git
 cd habitat-sim
 git checkout v0.2.3
